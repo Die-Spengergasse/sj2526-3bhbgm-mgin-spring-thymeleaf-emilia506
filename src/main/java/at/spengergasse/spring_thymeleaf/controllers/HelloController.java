@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 //ohne nichts hinten kommt genau diese methode dran
 //bekommt vom framework ein model übergeben, dh
 
-//schaut nur dass datum da steht, wenn nicht weiter hinten steht
+//schaut nur, dass datum da steht, wenn nicht weiter hinten steht
 @Controller
 public class HelloController {
 

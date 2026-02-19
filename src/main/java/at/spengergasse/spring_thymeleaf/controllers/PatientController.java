@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.time.format.DateTimeFormatter;
 //anotation, damit spring weiß, dass es sich um einen controller handelt, der die anfragen bearbeitet
 //hat eine refernez drauf, damit er die patienten in der datenbank speichern kann, damit er sie in der liste anzeigen kann
-//man schreibt ihm kontruktor, bitte übergib mir das patient repository
+//man schreibt im kontruktor, bitte übergib mir das patient repository
 //es wird eine instanz erstellt, findet den controller und gibt eine refernz auf das repository
 //find all sucht alle patienten der datenbank und gibt sie zurück, damit sie in der liste angezeigt werden können
 //add fügt einen neuen patienten hinzu, der über das formular übergeben wird, speichert ihn in der datenbank und leitet zurück zur liste weiter

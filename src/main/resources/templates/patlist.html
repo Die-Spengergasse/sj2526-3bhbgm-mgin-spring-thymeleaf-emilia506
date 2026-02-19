@@ -15,9 +15,9 @@
             </tr>
         </thead>
         <tbody>
-            <tr th:each="p : ${patients}">
-                <td th:text="${p.name}"></td>
-                <td th:text="${p.birth}"></td>
+            <tr th:each="p : ${patients}"> //for each schleife durch die patients liste, p ist das aktuelle element
+                <td th:text="${p.name}"></td>//${p.name} gibt den Namen des aktuellen Patienten aus
+                <td th:text="${p.birth}"></td> ${xxx} ist die Syntax um auf die Eigenschaften eines Objekts zuzugreifen, in diesem Fall auf die Eigenschaft birth des aktuellen Patienten p
             </tr>
         </tbody>
 
