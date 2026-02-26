@@ -44,4 +44,5 @@ public class PatientController {
         patientRepository.save(patient);
         return  "redirect:/patient/list";
     }
+
 }

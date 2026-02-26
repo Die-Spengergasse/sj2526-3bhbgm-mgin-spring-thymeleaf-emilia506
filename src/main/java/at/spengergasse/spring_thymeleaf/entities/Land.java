@@ -38,4 +38,12 @@ public class Land {
     public void setHauptstadt(String hauptstadt) {
         this.hauptstadt = hauptstadt;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

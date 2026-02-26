@@ -3,8 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>LänderListe</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
 <h1>Länder Liste</h1>
+<div class="container">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Hauptstadt</th>
+            <th>Einwohner</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="p : ${list}">
+            <td th:text="${l.name}"></td>
+            <td th:text="${l.hautpstadt}"></td>
+            <td th:text="${l.einwohner}"></td>
+            <td>
+                <a th:href="@{/land/delete(id=${land.id})}" class="btn btn-danger btn-sm">Löschen</a>
+            </td>
+
+        </tr>
+        </tbody>
+
+    </table>
+
+    <p>
+        <a href="/land/add">neues Land</a>
+    </p>
+</div>
 </body>
 </html>
+

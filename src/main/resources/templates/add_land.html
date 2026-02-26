@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Länder hinzufügen</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Länder hinzufügen</h2>
+    <form th:action="@{/land/add}" th:object="${land}" method="post">
+        <input type="text" th:field="*{name}" class="form-control" placeholder="Land name">
+        <input type="text" th:field="*{hauptstadt}" class="form-control" placeholder="Hauptstadt">
+        <input type="number" th:field="*{einwohner}" class="form-control" placeholder="Einwohnerzahl">
+        <input type="submit" class="form-control" value="Speichern">
+    </form>
+    </div>
+</body>
+</html>

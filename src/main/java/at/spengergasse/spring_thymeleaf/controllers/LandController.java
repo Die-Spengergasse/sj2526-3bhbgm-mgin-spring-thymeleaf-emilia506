@@ -1,10 +1,12 @@
 package at.spengergasse.spring_thymeleaf.controllers;
 
+import at.spengergasse.spring_thymeleaf.entities.Land;
 import at.spengergasse.spring_thymeleaf.entities.LandRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @Controller
@@ -22,4 +24,16 @@ public class LandController {
         return "landlist";
     }
 
+    @GetMapping ("/add")
+    public String addLand(Model model) {
+        model.addAttribute("land", new Land());
+        return "add_land";
+
+    }
+
+    @PostMapping ("/add")
+    public String addLand(@ModelAttribute("land") Land land) {
+        landRepository.save(land);
+        return "redirect:/land/list";
+    }
 }
