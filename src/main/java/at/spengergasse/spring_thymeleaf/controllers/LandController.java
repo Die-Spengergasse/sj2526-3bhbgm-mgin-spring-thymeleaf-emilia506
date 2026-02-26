@@ -36,4 +36,12 @@ public class LandController {
         landRepository.save(land);
         return "redirect:/land/list";
     }
+
+    @GetMapping ("/edit")
+    public String editLand(@RequestParam("id") Integer id, Model model) {
+        Land land = landRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid land Id:" + id));
+        model.addAttribute("land", land);
+        return "edit_land";
+    }
+
 }
