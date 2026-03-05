@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+
 <head>
     <meta charset="UTF-8">
-    <title>LandVerwaltung</title>
+    <title>Landverwaltung</title>
 </head>
-<body>
-<div class="container">
-    <h1>LandVerwaltung</h1>
-    <h2>Herzlich Willkommen zu unserer LandVerwaltung</h2>
-    <h3>Du kannst hier Länder hinzufügen, sie anzeigen lassen, wieder löschen und aktualisieren</h3>
+<body style="background-color: lightblue">
+<div class ="container">
+    <h1>Landverwaltung</h1>
+    <h2>Herzlich Willkommen zu meiner Landverwaltung!</h2>
+    <h3>Hier kannst du ein Land hinzufügen mit Hauptstadt, Name und Einwohner. Dann kann man sich die Liste anzeigen lassen und löschen</h3>
     <div>
-        <p>Länder anzeigen lassen:
-            <a th:href="@{/land/list}">Länder Liste</a>
+        <p>Hier kommst du zu den Ländern: -->
+            <!-- <a href="/land/list">Länder</a> -->
+            <a th:href="@{/land/list}">Länder</a> <!--Ist berüßung und link zur landlist-->
         </p>
     </div>
-    </div>
+
+</div>
 </body>
 </html>

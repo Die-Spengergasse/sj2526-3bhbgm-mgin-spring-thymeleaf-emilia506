@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Länder hinzufügen</title>
+    <title>Add Land</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
-<body>
-    <div class="container">
-        <h2>Länder hinzufügen</h2>
+<body  style="background-color: lightblue">
+<div class="container">
+    <h1>Länder Hinzufügen</h1>
     <form th:action="@{/land/add}" th:object="${land}" method="post">
-        <input type="text" th:field="*{name}" class="form-control" placeholder="Land name">
-        <input type="text" th:field="*{hauptstadt}" class="form-control" placeholder="Hauptstadt">
-        <input type="number" th:field="*{einwohner}" class="form-control" placeholder="Einwohnerzahl">
+        <input type="hidden" th:field="*{id}">  <!-- Damit die Id mitgegeben wird, damit es dann das originale bearbeitet und nicht ein neues erstellt -->
+        <input type="text" th:field="*{name}" class="form-control" placeholder="land name"> <!--placeholder ist das was im eingebaefeld als ino steht-->
+        <input type="text" th:field="*{hauptstadt}" class="form-control" placeholder="hauptstadt name">
+        <input type="text" th:field="*{einwohner}" class="form-control" placeholder="einwohner anzahl">
         <input type="submit" class="form-control" value="Speichern">
+        <!-- das ist ein Formular mit dem man die Parameter eingeben kann und die Daten dann mit postmapping gespeichert werden-->
     </form>
-    </div>
+</div>
 </body>
 </html>
